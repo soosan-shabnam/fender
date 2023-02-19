@@ -12,6 +12,8 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build the fender-backend-docker image
+        with:
+          context: src
         run: |
           docker build . --tag ghcr.io/soosan-shabnam/fender-backend:latest
           docker run ghcr.io/soosan-shabnam/fender-backend:latest
