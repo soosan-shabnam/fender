@@ -13,6 +13,6 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build the fender-backend-docker image
         run: |
-          docker build . --tag ghcr.io/Soosan-Shabnam/fender-backend:latest
-          docker run ghcr.io/Soosan-Shabnam/fender-backend:latest
-          docker push ghcr.io/Soosan-Shabnam/fender-backend:latest
+          docker build . --tag ghcr.io/soosan-shabnam/fender-backend:latest
+          docker run ghcr.io/soosan-shabnam/fender-backend:latest
+          docker push ghcr.io/soosan-shabnam/fender-backend:latest
