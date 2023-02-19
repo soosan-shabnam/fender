@@ -14,5 +14,6 @@ jobs:
       - name: Docker-Compose Publish
         uses: pennsignals/publish_docker-compose@v0.1.1
         with:
+          version: '0.2.6-rc.1'
           docker_compose: 'compose.yaml' # required
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
