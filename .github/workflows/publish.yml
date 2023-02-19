@@ -11,10 +11,8 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build the fender-backend-docker image
+      - name: Docker-Compose Publish
+        uses: pennsignals/publish_docker-compose@v0.1.1
         with:
-          context: src
-        run: |
-          docker build . --tag ghcr.io/soosan-shabnam/fender-backend:latest
-          docker run ghcr.io/soosan-shabnam/fender-backend:latest
-          docker push ghcr.io/soosan-shabnam/fender-backend:latest
+          docker_compose: 'compose.yaml' # required
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
