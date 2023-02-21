@@ -1,4 +1,0 @@
-person
-car
-truck
-traffic light
